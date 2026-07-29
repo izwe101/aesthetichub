@@ -1,0 +1,204 @@
+body{
+    
+    font-family:"Caveat", Arial;
+    background-color: #0f0f0f;
+    background-image: url("stars.jfif");
+    background-repeat: repeat;
+    background-size: 220px auto;
+    background-position: top left;
+    min-height: 100vh;
+    padding: 16px 16px 40px;
+    box-sizing: border-box;
+    animation: scrollBg 40s linear infinite;
+}
+
+@keyframes scrollBg {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+.hdr{
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 980px;
+    margin: 0 auto 20px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+.hdr h1{
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 10px;
+    color: rgb(214, 214, 226);
+    -webkit-text-stroke: 1px black;
+    line-height: 1.1;
+
+}
+.tagline{
+    font-size: clamp(1.1rem, 2.2vw, 2rem);
+    color: rgb(214, 214, 226);
+    max-width: 600px;
+    margin: 0 auto;
+
+}
+
+.intro-panel{
+    max-width: 760px;
+    margin: 0 auto 20px;
+}
+
+.typewriter-box{
+    background: rgba(26, 26, 26, 0.9);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 14px 16px;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.typewriter-content{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.typewriter-box p{
+    margin: 0;
+    color: #f6f6f6;
+    font-size: clamp(0.95rem, 2.4vw, 1.1rem);
+    line-height: 1.5;
+    text-align: center;
+}
+
+.burger-btn{
+   background-image: url("bknd.gif");
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 10px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.burger-btn span{
+    display: block;
+    width: 22px;
+    height: 4px;
+    background: #f6f6f6;
+    border-radius: 2px;
+}
+
+.burger-menu{
+    margin-top: 10px;
+    background: rgba(10, 10, 10, 0.95);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.burger-menu a{
+    display: block;
+    padding: 12px 16px;
+    color: #f6f6f6;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.burger-menu a:last-child{
+    border-bottom: none;
+}
+
+.burger-menu a:hover{
+    background: rgba(255,255,255,0.08);
+}
+
+.cursor{
+    display: inline-block;
+    margin-left: 2px;
+    color: #f6f6f6;
+    animation: blink 0.8s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.gallery-section{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.gallery-tile{
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    background: #111;
+}
+
+.gallery-tile img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px 12px 28px;
+    }
+
+    .hdr {
+        padding: 28px 14px;
+        border-radius: 16px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .typewriter-box {
+        padding: 12px 12px;
+        min-height: 80px;
+    }
+
+    .burger-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .gallery-tile {
+        border-radius: 10px;
+    }
+}
