@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     `My personal Mood board site. 
     featuring some of my fav anime visuals `,
    
-    'designed by izwe icorpororation.',
+    'designed by izwe incorpororation.',
     
   ];
 
