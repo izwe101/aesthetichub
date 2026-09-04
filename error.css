@@ -26,23 +26,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* Button */
-.btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 25px;
-    background: white;
-    color: #2575fc;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
-}
 
-.btn:hover {
-    background: #e6e6e6;
-    transform: scale(1.05);
-}
 
 
 @keyframes fadeIn {
