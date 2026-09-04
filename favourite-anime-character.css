@@ -82,7 +82,7 @@ body {
     background: #d9d9d9;
 }
 
-/* Character Card Styles */
+
 .character-card {
     margin-bottom: 20px;
     padding: 16px;
@@ -110,7 +110,7 @@ body {
     line-height: 1.5;
 }
 
-/* Slideshow Container */
+
 .slideshow-container {
     position: relative;
     width: 100%;
@@ -149,7 +149,7 @@ body {
     }
 }
 
-/* Navigation Dots */
+
 .dots-container {
     position: absolute;
     bottom: 10px;
