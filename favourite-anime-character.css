@@ -126,7 +126,7 @@ body {
     display: none;
     width: 100%;
     aspect-ratio: 4 / 3;
-    animation: fadeIn 0.5s;
+    animation: fadeIn 0.2s;
 }
 
 .slide.fade {
