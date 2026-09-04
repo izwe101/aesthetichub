@@ -1,44 +1,39 @@
 let currentSlideIndex = {};
 
-// Initialize all slideshows
 document.addEventListener('DOMContentLoaded', function() {
-    const containers = document.querySelectorAll('.character-container');
-    containers.forEach((container, index) => {
+    const cards = document.querySelectorAll('.character-card');
+    cards.forEach((card, index) => {
         currentSlideIndex[index] = 0;
         showSlide(0, index);
-        // Auto-advance slides every 5 seconds
         setInterval(() => autoSlide(index), 5000);
     });
 });
 
-// Show slide for a specific container
-function showSlide(n, containerIndex) {
-    const container = document.querySelectorAll('.character-container')[containerIndex];
-    const slides = container.querySelectorAll('.slide');
-    const dots = container.querySelectorAll('.dot');
+function showSlide(n, cardIndex) {
+    const card = document.querySelectorAll('.character-card')[cardIndex];
+    const slides = card.querySelectorAll('.slide');
+    const dots = card.querySelectorAll('.dot');
 
     if (n >= slides.length) {
-        currentSlideIndex[containerIndex] = 0;
+        currentSlideIndex[cardIndex] = 0;
     }
     if (n < 0) {
-        currentSlideIndex[containerIndex] = slides.length - 1;
+        currentSlideIndex[cardIndex] = slides.length - 1;
     }
 
     slides.forEach(slide => slide.classList.remove('fade'));
     dots.forEach(dot => dot.classList.remove('active'));
 
-    slides[currentSlideIndex[containerIndex]].classList.add('fade');
-    dots[currentSlideIndex[containerIndex]].classList.add('active');
+    slides[currentSlideIndex[cardIndex]].classList.add('fade');
+    dots[currentSlideIndex[cardIndex]].classList.add('active');
 }
 
-// Manual slide selection via dots
-function currentSlide(n, containerIndex) {
-    currentSlideIndex[containerIndex] = n;
-    showSlide(n, containerIndex);
+function currentSlide(n, cardIndex) {
+    currentSlideIndex[cardIndex] = n;
+    showSlide(n, cardIndex);
 }
 
-// Auto-advance slides
-function autoSlide(containerIndex) {
-    currentSlideIndex[containerIndex]++;
-    showSlide(currentSlideIndex[containerIndex], containerIndex);
+function autoSlide(cardIndex) {
+    currentSlideIndex[cardIndex]++;
+    showSlide(currentSlideIndex[cardIndex], cardIndex);
 }
